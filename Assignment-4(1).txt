@@ -1,0 +1,17 @@
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class UppercaseConverter {
+    public static void main(String[] args) {
+        Stream<String> names = Stream.of("aBc", "d", "ef");
+
+        List<String> uppercaseNames = names
+                .map(String::toUpperCase) // Convert each string to uppercase
+                .collect(Collectors.toList()); // Collect the results into a list
+
+        // Print the uppercase names
+        System.out.println("Uppercase names:");
+        uppercaseNames.forEach(System.out::println);
+    }
+}

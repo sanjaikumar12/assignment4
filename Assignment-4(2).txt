@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class NonEmptyStrings {
+    public static void main(String[] args) {
+        List<String> listStrings = new ArrayList<>();
+        listStrings.add("abc");
+        listStrings.add("");
+        listStrings.add("bc");
+        listStrings.add("efg");
+        listStrings.add("abcd");
+        listStrings.add("");
+        listStrings.add("jkl");
+
+        List<String> nonEmptyStrings = new ArrayList<>();
+
+        for (String str : listStrings) {
+            if (!str.isEmpty()) {
+                nonEmptyStrings.add(str);
+            }
+        }
+
+        // Print non-empty strings
+        System.out.println("Non-empty strings:");
+        for (String str : nonEmptyStrings) {
+            System.out.println(str);
+        }
+    }
+}
